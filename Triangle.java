@@ -21,8 +21,8 @@ public class Triangle
      */
     public Triangle()
     {
-        height = 60;
-        width = 70;
+        height = 80;
+        width = 80;
         xPosition = 210;
         yPosition = 140;
         color = "green";

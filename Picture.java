@@ -11,10 +11,11 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square square1;
+    private Triangle triangle1;
+    private Triangle triangle2;
+    private Circle circle1;
+    private Circle circle2;
 
     /**
      * Constructor for objects of class Picture
@@ -29,58 +30,51 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
+        square1 = new Square();
+        square1.moveHorizontal(-310); 
+        square1.moveVertical(0);
+        square1.changeSize(300);
+        square1.makeVisible();
+        square1.changeColor("black");
         
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
-
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
-        roof.makeVisible();
-
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
-    }
-
-    /**
-     * Change this picture to black/white display
-     */
-    public void setBlackAndWhite()
-    {
-        if (wall != null)   // only if it's painted already...
-        {
-            wall.changeColor("black");
-            window.changeColor("white");
-            roof.changeColor("black");
-            sun.changeColor("black");
-        }
+        triangle1 = new Triangle();
+        triangle1.moveHorizontal(-160); 
+        triangle1.moveVertical(-100);
+        triangle1.makeVisible();
+        triangle1.changeColor("black");
+        
+        triangle2 = new Triangle();
+        triangle2.moveHorizontal(20); 
+        triangle2.moveVertical(-100);
+        triangle2.makeVisible();
+        triangle2.changeColor("black");
+        
+        circle1 = new Circle();
+        circle1.moveHorizontal(-180); 
+        circle1.moveVertical(60);
+        circle1.makeVisible();
+        circle1.changeColor("yellow");
+        
+        circle2 = new Circle();
+        circle2.moveHorizontal(-30); 
+        circle2.moveVertical(60);
+        circle2.makeVisible();
+        circle2.changeColor("yellow");
+        
     }
 
     /**
      * Change this picture to use color display
      */
-    public void setColor()
+    /**public void setColor()
     {
         if (wall != null)   // only if it's painted already...
         {
-            wall.changeColor("red");
-            window.changeColor("black");
-            roof.changeColor("green");
-            sun.changeColor("yellow");
+            square1.changeColor("black");
+            triangle1.changeColor("black");
+            triangle2.changeColor("black");
+            circle1.changeColor("yellow");
+            circle2.changeColor("yellow");
         }
-    }
+    }*/
 }
